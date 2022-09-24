@@ -19,15 +19,37 @@
             <option value="2">Card 2</option>
             <option value="3">Card 3</option>
           </select>
-          <label>Insert Teacher's Name here</label>
+          <label>Insert First Line here</label>
           <label>
-              <textarea name="title" placeholder="text here"  rows="5" cols="40"></textarea>
-              <input name="title_color" type="color" id="colorpicker1" value="#000000">
+              <textarea name="t0" placeholder="paragraph 1, max 26 characters" maxlength="26" rows="5" cols="40"></textarea>
           </label>
-          <label>Insert message here</label>
+          <div>
+            <input name="c0" type="color" id="colorpicker1" value="#000000">
+            <input name="bold0" type="checkbox">
+            <span class="label-body">Bold text</span>
+          </div>
+          <label>Insert Second Line here</label>
           <label>
-              <textarea name="subtitle" placeholder="text here"  rows="5" cols="40"></textarea>
-              <input name="subtitle_color" type="color" id="colorpicker2" value="#000000">
+              <textarea name="t1" placeholder="paragraph 2, max 26 characters" maxlength="26" rows="5" cols="40"></textarea>
+          </label>
+          <div>
+            <input name="c1" type="color" id="colorpicker2" value="#000000">
+            <input name="bold1" type="checkbox">
+            <span class="label-body">Bold text</span>
+          </div>
+          <label>Insert Receiver's Name</label>
+          <label>
+              <input type="text" name="t2" placeholder="Receiver's name" width="50%">
+              <input name="c2" type="color" id="colorpicker3" value="#000000">
+              <input name="bold2" type="checkbox">
+              <span class="label-body">Bold text</span>
+          </label>
+          <label>Insert Sender's Name</label>
+          <label>
+              <input type="text" name="t3" placeholder="Sender's name" width="50%">
+              <input name="c3" type="color" id="colorpicker4" value="#000000">
+              <input name="bold3" type="checkbox">
+              <span class="label-body">Bold text</span>
           </label>
           <div>
             <input type="submit" value="Submit" id="submit_btn" style="background-color: #A7C7E7"/>

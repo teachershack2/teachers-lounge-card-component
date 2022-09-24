@@ -19,27 +19,28 @@ def main():
 
 
 @app.route('/send', methods=['POST'])
-def send(sum=sum):
+def send():
     if request.method == 'POST':
 
-        title = request.form['title']
-        subtitle = request.form['subtitle']
+        text = cardmaker.get_texts(request)
+
         number = request.form['card_no']
 
-        title_color = request.form['title_color']
-        subtitle_color = request.form['subtitle_color']
+        colour = cardmaker.get_colors(request)
 
-        print(title, subtitle, number)
+        bold = cardmaker.is_bold(request)
+
+        print(text, number, bold, colour)
 
         file = "static/errorimg.png"
 
-        if title or subtitle:
+        if len(text) > 0:
             if number == '1':
-                file = cardmaker.make_card1(title, subtitle, title_color, subtitle_color)
+                file = cardmaker.make_card1(text, colour, bold)
             elif number == '2':
-                file = cardmaker.make_card2(title, subtitle, title_color, subtitle_color)
+                file = cardmaker.make_card2(text, colour, bold)
             elif number == '3':
-                file = cardmaker.make_card3(title, subtitle, title_color, subtitle_color)
+                file = cardmaker.make_card3(text, colour, bold)
 
             image_file = url_for('static', filename=file)
 
