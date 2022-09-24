@@ -22,14 +22,15 @@
           <label>Insert Teacher's Name here</label>
           <label>
               <textarea name="title" placeholder="text here"  rows="5" cols="50"></textarea>
+              <input name="title_color" type="color" id="colorpicker1" value="#000000">
           </label>
           <label>Insert message here</label>
           <label>
               <textarea name="subtitle" placeholder="text here"  rows="5" cols="50"></textarea>
+              <input name="subtitle_color" type="color" id="colorpicker2" value="#000000">
           </label>
           <div>
             <input type="submit" value="Submit" id="submit_btn" style="background-color: #A7C7E7"/>
-            <a href="/">Click here to refresh page</a>
           </div>
         </div>
 
@@ -41,6 +42,9 @@
           </label>
           <div>
             <img src="{{ image_file }}" alt="Generate digital card goes here" width="100%" height="100%">
+          </div>
+          <div>
+            <a href="/">Click here to refresh page</a>
           </div>
         </div>
       </form>
