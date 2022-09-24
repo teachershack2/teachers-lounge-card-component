@@ -7,7 +7,9 @@ CORS(app)
 
 @app.route('/')
 def main():
-    return render_template('index.html')
+    image_file = url_for('static', filename="default.png")
+
+    return render_template('index.html', image_file=image_file)
 
 
 @app.route('/send', methods=['POST'])
@@ -20,7 +22,7 @@ def send(sum=sum):
 
         print(title, subtitle, number)
 
-        file = "errorimg.png"
+        file = "static/errorimg.png"
 
         if title or subtitle:
             if number == '1':
@@ -35,6 +37,7 @@ def send(sum=sum):
             return render_template('index.html', image_file=image_file)
 
         else:
+            print('fasdfsafsadf')
             error_image_file = url_for('static', filename=file)
             return render_template('index.html', image_file=error_image_file)
 
