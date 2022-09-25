@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for
-from functions import cardmaker
+from functions import (cardmaker, send_email)
 from flask_cors import CORS
 import os
 import re
@@ -43,6 +43,7 @@ def send():
                 file = cardmaker.make_card3(text, colour, bold)
 
             image_file = url_for('static', filename=file)
+            send_email.send(request, file, text[3])
 
             return render_template('index.html', image_file=image_file)
 
