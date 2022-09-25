@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>teacher's hack 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+  </head>
+  <body>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/send" method="POST">
+        <div class="six columns">
+          <label for="exampleRecipientInput">Select Card Design Number</label>
+          <select class="u-full-width" id="exampleRecipientInput" name="card_no" >
+            <option value="1">Card 1</option>
+            <option value="2">Card 2</option>
+            <option value="3">Card 3</option>
+          </select>
+          <label>Insert First Line here</label>
+          <label>
+              <textarea name="t0" placeholder="paragraph 1, max 26 characters" maxlength="26" rows="5" cols="40"></textarea>
+          </label>
+          <div>
+            <input name="c0" type="color" id="colorpicker1" value="#000000">
+            <input name="bold0" type="checkbox">
+            <span class="label-body">Bold text</span>
+          </div>
+          <label>Insert Second Line here</label>
+          <label>
+              <textarea name="t1" placeholder="paragraph 2, max 26 characters" maxlength="26" rows="5" cols="40"></textarea>
+          </label>
+          <div>
+            <input name="c1" type="color" id="colorpicker2" value="#000000">
+            <input name="bold1" type="checkbox">
+            <span class="label-body">Bold text</span>
+          </div>
+          <label>Insert Receiver's Name</label>
+          <label>
+              <input type="text" name="t2" placeholder="Receiver's name" width="50%">
+              <input name="c2" type="color" id="colorpicker3" value="#000000">
+              <input name="bold2" type="checkbox">
+              <span class="label-body">Bold text</span>
+          </label>
+          <label>Insert Sender's Name</label>
+          <label>
+              <input type="text" name="t3" placeholder="Sender's name" width="50%">
+              <input name="c3" type="color" id="colorpicker4" value="#000000">
+              <input name="bold3" type="checkbox">
+              <span class="label-body">Bold text</span>
+          </label>
+          <div>
+            <input type="submit" value="Submit" id="submit_btn" style="background-color: #A7C7E7"/>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="six columns">
+          <label>
+            Right click on image to save!
+          </label>
+          <div>
+            <img src="{{ image_file }}" alt="Generate digital card goes here" width="100%" height="100%">
+          </div>
+          <div>
+            <a href="/">Click here to refresh page</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>
