@@ -51,6 +51,13 @@
               <input name="bold3" type="checkbox">
               <span class="label-body">Bold text</span>
           </label>
+          <label>Insert Email Address</label>
+          <label>
+              <input type="email" name="e1" placeholder="Email address" width="50%">
+              <br>
+                <input name="isEmail" type="checkbox">
+                <span class="label-body">[Optional] Send the card to the recipient's email address!</span>
+          </label>
           <div>
             <input type="submit" value="Submit" id="submit_btn" style="background-color: #A7C7E7"/>
           </div>
@@ -63,7 +70,7 @@
             Right click on image to save!
           </label>
           <div>
-            <img src="{{ image_file }}" alt="Generate digital card goes here" width="100%" height="100%">
+            <img src="{{ image_file }}" alt="Generated digital card goes here" width="100%" height="100%">
           </div>
           <div>
             <a href="/">Click here to refresh page</a>
