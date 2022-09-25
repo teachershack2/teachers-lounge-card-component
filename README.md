@@ -1,4 +1,4 @@
-# teachers-lounge
+# teachers-lounge appreciation card component
 
 ## Fast and easy way to create custom appreciation cards!  
 
@@ -11,6 +11,7 @@ Link: https://appreciationcards.pythonanywhere.com
 Built with: 
 - `Flask`
 - `pillow`
+- `Twilio Sendgrid API`
 - `HTML`
 - `Skeleton CSS`
 - `pythonanywhere`
